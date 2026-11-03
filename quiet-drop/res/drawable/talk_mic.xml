@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A microphone, pixel for pixel: one pixel is 6 dp (the world's own x6), on an 18-pixel canvas.
+     All of it sits inside the middle 66 dp circle, which every launcher's shape keeps. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="18"
+    android:viewportHeight="18">
+    <!-- the head: Signal amber, rounded top and bottom, with a glint of Paper -->
+    <path android:fillColor="#FFB44A" android:pathData="M8,4h2v1h1v4h-1v1h-2v-1h-1v-4h1z" />
+    <path android:fillColor="#F4EEDC" android:pathData="M8,5h1v2h-1z" />
+    <!-- the cradle, stem and foot: Soft -->
+    <path android:fillColor="#9298B0"
+        android:pathData="M5,7h1v3h-1z M12,7h1v3h-1z M6,10h1v1h-1z M11,10h1v1h-1z M7,11h4v1h-4z M8,12h2v1h-2z M7,13h4v1h-4z" />
+</vector>

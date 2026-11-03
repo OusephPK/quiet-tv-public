@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.quiet.watch"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="28" android:targetSdkVersion="30" />
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Watch hands every title to Stremio to play. -->
+    <queries>
+        <package android:name="com.quiet.home" />  <!-- home's shared prefs (Prefs): Android 11 hides other apps otherwise -->
+        <package android:name="com.stremio.one" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="stremio" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="com.quiet.permission.PREFS" />
+
+    <application
+        android:label="@string/app_name"
+        android:theme="@style/Quiet"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:usesCleartextTraffic="false">
+        <activity
+            android:name=".Main"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustNothing"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout|density|uiMode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- How voice opens a title here ("watch Perfect Days"): only Quiet apps may come in this way. -->
+        <activity-alias
+            android:name=".FromHome"
+            android:targetActivity=".Main"
+            android:exported="true"
+            android:permission="com.quiet.permission.PREFS" />
+        <!-- Home's shelf for this app (Quiet apps only). -->
+        <provider
+            android:name=".ShelfProvider"
+            android:authorities="com.quiet.watch.shelf"
+            android:exported="true"
+            android:readPermission="com.quiet.permission.PREFS"
+            android:writePermission="com.quiet.permission.PREFS" />
+    </application>
+</manifest>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Quiet's voice: listens only while you ask it to (the remote's voice button, or the wake word),
+     reads which app is in front and its search box (to type what you say), and can press BACK/HOME.
+     When you mean something it can't read ("the second video"), it takes a picture of the screen
+     for that ask, and can tap a place on it. -->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagRequestFilterKeyEvents|flagRetrieveInteractiveWindows"
+    android:canRequestFilterKeyEvents="true"
+    android:canRetrieveWindowContent="true"
+    android:canTakeScreenshot="true"
+    android:canPerformGestures="true"
+    android:notificationTimeout="250"
+    android:description="@string/voice_about" />

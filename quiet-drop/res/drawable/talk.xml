@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "Talk to TV" on a phone's home screen: the shape (circle, squircle...) is the phone's own. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/stone" />
+    <foreground android:drawable="@drawable/talk_mic" />
+</adaptive-icon>

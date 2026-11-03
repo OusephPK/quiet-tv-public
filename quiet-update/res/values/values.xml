@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Updates</string>
+    <color name="ink">#0B0B0C</color>
+    <style name="Quiet" parent="android:Theme.DeviceDefault.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@color/ink</item>
+        <!-- No black placeholder while the app starts: the page you came from stays (and keeps
+             living) until this one has drawn its first frame of the world. -->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:colorBackground">@color/ink</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:defaultFocusHighlightEnabled">false</item>
+    </style>
+</resources>

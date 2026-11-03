@@ -1,0 +1,19 @@
+# Builds and outputs
+build/
+*.apk
+*.idsig
+
+# The signing key: never in git
+*.keystore
+*.jks
+
+# Private to this Mac: TV backups, logs, screenshots, old versions
+backups/
+tv-backup/
+diag/
+power/
+shots-emu/
+shots-tv/
+versions/
+quiet-launcher/shots/
+.DS_Store

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- On a phone: touch and hold the app's icon for "Talk to TV", or put it on the home screen (Phone
+     has a button that asks the phone to). It opens the remote already listening. -->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="talk"
+        android:icon="@drawable/talk"
+        android:shortcutShortLabel="@string/talk"
+        android:shortcutLongLabel="@string/talk_long">
+        <intent
+            android:action="com.quiet.drop.TALK"
+            android:targetPackage="com.quiet.drop"
+            android:targetClass="com.quiet.drop.Phone" />
+    </shortcut>
+</shortcuts>
